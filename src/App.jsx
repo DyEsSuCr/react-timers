@@ -1,7 +1,9 @@
+import { Clock } from './components/date/CurrenDate'
+
 function App() {
   return (
-    <div>
-      <h1>TIMER</h1>
+    <div className="min-h-screen w-full bg-primary text-white relative">
+      <Clock />
     </div>
   )
 }
