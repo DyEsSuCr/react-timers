@@ -6,8 +6,8 @@ export const Form = () => {
   }
 
   return (
-    <div className="flex justify-center items-center flex-col gap-12 pt-24 pb-48">
-      <form className="px-1 py-4 bottom-3 bg-second rounded-xl shadow-shadow relative">
+    <div className="flex justify-center items-center flex-col gap-12 pt-52 pb-48 duration-300 md:pt-24">
+      <form className="px-1 py-4 bg-second rounded-xl shadow-shadow">
         <h1 className="text-4xl font-semibold text-white uppercase text-center">Timer</h1>
         <div className="py-7  max-w-max mx-auto">
           <input className="text-js text-5xl font-bold text-center w-20" type="number" placeholder="00" />

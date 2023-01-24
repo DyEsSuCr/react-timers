@@ -14,7 +14,7 @@ export const Clock = () => {
   }, 1000)
 
   return (
-    <div className="absolute top-12 left-12  p-3 text-center rounded-xl shadow-shadow text-js font-semibold">
+    <div className="absolute top-12 left-0 right-0 p-3 mx-auto text-center rounded-xl shadow-shadow text-js font-semibold max-w-max duration-300 md:left-12 md:mx-0">
       <span className="hour">{hours < 10 ? hours - 12 : `0${hours - 12}`}</span>
       <span>:</span>
       <span className="minutes">{minutes < 10 ? `0${minutes}` : minutes}</span>
