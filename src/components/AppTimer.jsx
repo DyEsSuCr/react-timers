@@ -7,10 +7,10 @@ import { Timers } from './timers/Timers'
 export function AppTimer() {
   const [timers, setTimers] = useState([])
 
+  const isLocalTimers = JSON.parse(localStorage.getItem('timers'))
+
   // NOTE: Crea El LocalStorage
   useEffect(() => {
-    const isLocalTimers = JSON.parse(localStorage.getItem('timers'))
-
     if (!isLocalTimers) {
       localStorage.setItem('timers', JSON.stringify(timers))
     } else {
@@ -29,11 +29,25 @@ export function AppTimer() {
     localStorage.setItem('timers', JSON.stringify([...timers, data]))
   }
 
+  // NOTE: Elimina Timer
+  const deleteTimer = (id) => {
+    const acceptDel = window.confirm(`¿Estas seguro de eliminar el temporizador con el id: ${id}?`)
+
+    if (acceptDel) {
+      let newTimers = isLocalTimers.filter((timer) => timer.id !== id)
+
+      setTimers(newTimers)
+      localStorage.setItem('timers', JSON.stringify(newTimers))
+    } else {
+      return
+    }
+  }
+
   return (
     <div className="min-h-screen w-full bg-primary text-white relative">
       <Clock />
       <Form createTimer={createTimer} />
-      <Timers timers={timers} />
+      <Timers timers={timers} delTimer={deleteTimer} />
     </div>
   )
 }

@@ -1,4 +1,4 @@
-export const Timer = ({ timer }) => {
+export const Timer = ({ timer, delTimer }) => {
   let { hours, minutes, seconds } = timer
 
   return (
@@ -18,6 +18,7 @@ export const Timer = ({ timer }) => {
           Start
         </button>
         <button
+          onClick={() => delTimer(timer.id)}
           className="text-lg font-medium text-white cursor-pointer p-1 duration-300
         hover:text-red"
         >
