@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Input } from './Input'
 
 export const Form = ({ createTimer }) => {
   const initialForm = {
@@ -35,31 +36,28 @@ export const Form = ({ createTimer }) => {
       <form className="px-1 py-4 bg-second rounded-xl shadow-shadow">
         <h1 className="text-4xl font-semibold text-white uppercase text-center">Timer</h1>
         <div className="py-7  max-w-max mx-auto">
-          <input
-            className="text-js text-5xl font-bold text-center w-20"
-            type="number"
+          <Input
             name="hours"
-            placeholder="00"
-            onChange={handleChange}
             value={form.hours}
+            myChange={(e) => {
+              handleChange(e)
+            }}
           />
           <span className="text-js text-5xl font-semibold text-center">:</span>
-          <input
-            className="text-js text-5xl font-bold text-center w-20"
-            type="number"
+          <Input
             name="minutes"
-            placeholder="00"
-            onChange={handleChange}
             value={form.minutes}
+            myChange={(e) => {
+              handleChange(e)
+            }}
           />
           <span className="text-js text-5xl font-semibold text-center">:</span>
-          <input
-            className="text-js text-5xl font-bold text-center w-20"
-            type="number"
+          <Input
             name="seconds"
-            placeholder="00"
-            onChange={handleChange}
             value={form.seconds}
+            myChange={(e) => {
+              handleChange(e)
+            }}
           />
         </div>
         <button
