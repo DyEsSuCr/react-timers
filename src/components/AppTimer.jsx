@@ -24,6 +24,7 @@ export function AppTimer() {
 
     if (data.hours === '') data.hours = '00'
     if (data.minutes === '') data.minutes = '00'
+    if (data.seconds === '') data.seconds = '00'
 
     setTimers([...timers, data])
     localStorage.setItem('timers', JSON.stringify([...timers, data]))
@@ -31,7 +32,7 @@ export function AppTimer() {
 
   // NOTE: Elimina Timer
   const deleteTimer = (id) => {
-    const acceptDel = window.confirm(`¿Estas seguro de eliminar el temporizador con el id: ${id}?`)
+    const acceptDel = window.confirm(`¿Delete timer with id:${id}?`)
 
     if (acceptDel) {
       let newTimers = isLocalTimers.filter((timer) => timer.id !== id)
