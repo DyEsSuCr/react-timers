@@ -1,12 +1,14 @@
 export const Timer = ({ timer }) => {
+  let { hours, minutes, seconds } = timer
+
   return (
     <div className="text-js text-4xl font-semibold text-center shadow-shadow p-3 rounded-xl">
       <div className="timer">
-        <span className="text-3xl">{timer.hours}</span>
+        <span className="text-3xl">{hours}</span>
         <span className="text-3xl px-1">:</span>
-        <span className="text-3xl">{timer.minutes}</span>
+        <span className="text-3xl">{minutes}</span>
         <span className="text-3xl px-1">:</span>
-        <span className="text-3xl">{timer.seconds}</span>
+        <span className="text-3xl">{seconds}</span>
       </div>
       <div className="actions">
         <button

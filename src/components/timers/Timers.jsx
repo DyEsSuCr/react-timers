@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Timer } from './Timer'
 
 export const Timers = ({ timers }) => {

@@ -8,25 +8,25 @@
   html {
     font-family: 'Open Sans', sans-serif;
   }
-}
 
-input {
-  background: none;
-  border: none;
-  padding: 0;
-}
+  input {
+    background: none;
+    border: none;
+    padding: 0;
+  }
 
-input[type='number']::placeholder {
-  color: #757575;
-  font-weight: 600;
-}
+  input[type='number']::placeholder {
+    color: #757575;
+    font-weight: 600;
+  }
 
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
-input[type='number'] {
-  appearance: textfield;
+  input[type='number'] {
+    appearance: textfield;
+  }
 }
