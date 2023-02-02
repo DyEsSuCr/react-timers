@@ -20,6 +20,10 @@ export function AppTimer() {
 
   // NOTE: Guarda Timer en en localStorage
   const createTimer = (data) => {
+    const maxTimers = 8
+
+    if (timers.length > maxTimers) return alert('Many Timer')
+
     data.id = crypto.randomUUID()
 
     if (data.hours === '') data.hours = '00'
