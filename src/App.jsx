@@ -4,10 +4,10 @@ import { Timers } from './components/timers/Timers'
 
 export default function App () {
   return (
-    <div className='min-h-screen w-full bg-primary text-white relative'>
-      <Clock />
+    <main className='main'>
       <Form />
       <Timers />
-    </div>
+      <Clock />
+    </main>
   )
 }

@@ -16,7 +16,7 @@ export const Clock = () => {
   const amPm = isMorning ? 'a.m' : 'p.m'
 
   return (
-    <div className='absolute top-12 left-0 right-0 p-3 mx-auto text-center rounded-xl shadow-shadow text-js font-semibold max-w-max duration-300 md:left-12 md:mx-0'>
+    <div className='clock'>
       <div className='space-x-1'>
         <span>{formattedTime}</span>
         <span>{amPm}</span>

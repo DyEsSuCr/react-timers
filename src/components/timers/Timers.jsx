@@ -19,8 +19,8 @@ export const Timers = () => {
   }
 
   return (
-    <div className='flex flex-row justify-center gap-12 max-w-5xl mx-auto flex-wrap pb-16'>
+    <section className='timers'>
       {timers.map((timer) => <Timer key={timer.id} timer={timer} removeTimer={deleteTimer} />)}
-    </div>
+    </section>
   )
 }

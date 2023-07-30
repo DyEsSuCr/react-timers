@@ -30,3 +30,27 @@
     appearance: textfield;
   }
 }
+
+.main {
+  @apply min-h-screen w-full bg-primary text-white relative
+}
+
+.startBtn {
+  @apply text-lg font-medium text-white cursor-pointer p-1 duration-300 hover:text-green
+}
+
+.deleteBtn {
+  @apply text-lg font-medium text-white cursor-pointer p-1 duration-300 hover:text-red
+}
+
+.addBtn {
+  @apply text-base font-semibold bg-js text-black py-2 px-5 rounded-xl uppercase border-none block mx-auto duration-300 ease-in-out hover:bg-jsh
+}
+
+.clock {
+  @apply absolute top-12 left-0 right-0 p-3 mx-auto text-center rounded-xl shadow-shadow text-js font-semibold max-w-max duration-300 md:left-12 md:mx-0
+}
+
+.timers {
+  @apply flex flex-row justify-center gap-12 max-w-5xl mx-auto flex-wrap pb-16
+}
