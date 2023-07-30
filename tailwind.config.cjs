@@ -9,12 +9,12 @@ module.exports = {
         second: '#262626',
         js: '#ffc500',
         jsh: '#ecb500',
-        green: '#00ff55',
+        green: '#00ff55'
       },
       boxShadow: {
-        shadow: '0px 0.8rem 0.8rem rgba(0, 0, 0, 0.25)',
-      },
-    },
+        shadow: '0px 0.8rem 0.8rem rgba(0, 0, 0, 0.25)'
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }
