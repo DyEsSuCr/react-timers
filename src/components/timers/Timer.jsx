@@ -3,12 +3,10 @@ export const Timer = ({ timer, removeTimer }) => {
 
   return (
     <div className='text-js text-4xl font-semibold text-center shadow-shadow p-3 rounded-xl'>
-      <div className='space-x-1 [&>span]:text-3xl'>
-        <span>{hours}</span>
-        <span>:</span>
-        <span>{minutes}</span>
-        <span>:</span>
-        <span>{seconds}</span>
+      <div className='[&>span]:text-3xl'>
+        <span className='pointsTimer'>{hours}</span>
+        <span className='pointsTimer'>{minutes}</span>
+        <span className='pointsTimer'>{seconds}</span>
       </div>
 
       <div>

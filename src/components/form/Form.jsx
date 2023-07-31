@@ -4,15 +4,15 @@ import { TimerContext } from '../../context/timerContext'
 
 import { useState, useContext } from 'react'
 
+const initialForm = {
+  id: null,
+  hours: '',
+  minutes: '',
+  seconds: ''
+}
+
 export const Form = () => {
   const { timers, setTimers } = useContext(TimerContext)
-
-  const initialForm = {
-    id: null,
-    hours: '',
-    minutes: '',
-    seconds: ''
-  }
 
   const [form, setForm] = useState(initialForm)
 
@@ -52,11 +52,9 @@ export const Form = () => {
       <form className='px-1 py-4 bg-second rounded-xl shadow-shadow'>
         <h1 className='text-4xl font-semibold text-white uppercase text-center'>Timer</h1>
 
-        <div className='py-7  max-w-max mx-auto [&>span]:text-js text-5xl font-semibold text-center'>
+        <div className='py-7 max-w-max mx-auto flex text-js'>
           <Input name='hours' value={form.hours} myChange={(e) => handleChange(e)} />
-          <span>:</span>
           <Input name='minutes' value={form.minutes} myChange={(e) => handleChange(e)} />
-          <span>:</span>
           <Input name='seconds' value={form.seconds} myChange={(e) => handleChange(e)} />
         </div>
 

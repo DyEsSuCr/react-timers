@@ -54,3 +54,13 @@
 .timers {
   @apply flex flex-row justify-center gap-12 max-w-5xl mx-auto flex-wrap pb-16
 }
+
+.pointsForm:not(:last-child)::after {
+  content: ':';
+  @apply text-5xl px-1
+}
+
+.pointsTimer:not(:last-child)::after {
+  content: ':';
+  @apply text-3xl px-1
+}
