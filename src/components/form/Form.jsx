@@ -8,7 +8,8 @@ const initialForm = {
   id: null,
   hours: '',
   minutes: '',
-  seconds: ''
+  seconds: '',
+  isRunning: false
 }
 
 export const Form = () => {
